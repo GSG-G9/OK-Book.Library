@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const { join } = require('path');
+require('dotenv').config();
 
 const router = require('./router');
 const { clientError } = require('./controllers/errorHandle');
