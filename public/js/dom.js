@@ -1,5 +1,6 @@
 const createCard = (obj) => {
   const elementsObj = createElementsObj({
+    link: 'a',
     bookCard: 'div',
     bookContent: 'div',
     imageCard: 'img',
@@ -10,6 +11,7 @@ const createCard = (obj) => {
   });
 
   appendNodes(elementsObj, {
+    link: ['bookCard'],
     bookCard: ['bookContent'],
     bookContent: ['imageCard', 'cardContent'],
     cardContent: ['bookName', 'bookBy', 'bookDes'],
@@ -35,8 +37,8 @@ const createCard = (obj) => {
   });
 
   elementsObj.imageCard.src = obj.imageLink;
-  elementsObj.bookCard.setAttribute('href', obj.infoLink);
-  return elementsObj.bookCard;
+  elementsObj.link.setAttribute('href', obj.infoLink);
+  return elementsObj.link;
 };
 
 const clearCards = () => {
