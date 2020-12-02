@@ -1,10 +1,14 @@
 const fetch = require('node-fetch');
 const filterData = require('./dataFilter');
+const urlCreater = require('./urlCreater');
 
 const bookApi = (() => {
   const search = (searchInput) => {
     const { API_KEY } = process.env;
-    return fetch(`https://www.googleapis.com/books/v1/volumes?key=${API_KEY}&q=${searchInput}`)
+    return fetch(urlCreater({
+      q: searchInput,
+      key: API_KEY,
+    }))
       .then((res) => res.json())
       .then((data) => filterData(data));
   };
