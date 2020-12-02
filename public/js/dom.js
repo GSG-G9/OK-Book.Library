@@ -35,7 +35,7 @@ const createCard = (obj) => {
   });
 
   elementsObj.imageCard.src = obj.imageLink;
-  elementsObj.bookCard.herf = obj.infoLink;
+  elementsObj.bookCard.setAttribute('href', obj.infoLink);
   return elementsObj.bookCard;
 };
 
@@ -47,4 +47,19 @@ const clearCards = () => {
   const newBookCards = document.createElement('div');
   newBookCards.classList.add('book-cards');
   popularBooks.appendChild(newBookCards);
+};
+
+const fetchData = (input = 'communication') => {
+  fetch(`/api/v1/search/${input}`)
+    .then((data) => data.json())
+    .then((data) => {
+      clearCards();
+      const bookCards = document.querySelector('.book-cards');
+      if (data.length === 0) {
+        bookCards.textContent = 'Book not found';
+      }
+      data.forEach((book) => {
+        bookCards.appendChild(createCard(book));
+      });
+    });
 };
