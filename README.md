@@ -19,13 +19,13 @@ Here You will find an input field, you can type any book then click enter that w
 We divieds the project in to stages :
 
 ##### Fornt end :
-pages : contiant html pages (index , 404 ) .
-js folder: contiant js files (dom , function , main) .
+- pages : contiant html pages (index , 404 ) .
+- js folder: contiant js files (dom , function , main) .
 
 ##### Back end :
-controller : contiant js pages (index , error ) .
-routing : serve these end points ( / , /home , /notFound, /api/v1/search/:bookname ).
-test folder : contiant test js file .
+- controller : contiant js pages (index , error ) .
+- routing : serve these end points ( / , /home , /notFound, /api/v1/search/:bookname ).
+- test folder : contiant test js file .
 
 > #### User Stories:
 > 'As a student at GSG code academy I want to know all the train departure times from Gaza station, so that I can get home in time for dinner'.🚉🍛
