@@ -53,10 +53,10 @@ describe('Get project by id', () => {
       });
   });
 
-  test('Route /gg return status (200) ', (done) => {
+  test('Route /ggg return status (302) ', (done) => {
     request(app)
-      .get('/gg')
-      .expect(200)
+      .get('/ggg')
+      .expect(302)
       .end((err, res) => {
         if (err) return done(err);
         done();

@@ -1,7 +1,7 @@
 const { bookSearch } = require('./api');
 const { rootRouter, homeRouter } = require('./home');
 const { clientError, serverError } = require('./errorHandle');
-const { notFound } = require('./notFound');
+const { notFound, notFoundRoute } = require('./notFound');
 
 module.exports = {
   bookSearch,
@@ -10,4 +10,5 @@ module.exports = {
   clientError,
   serverError,
   notFound,
+  notFoundRoute,
 };
