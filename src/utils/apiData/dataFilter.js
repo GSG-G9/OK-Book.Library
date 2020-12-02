@@ -1,5 +1,7 @@
 const filterData = (data) => {
   const newData = [];
+  if (!data.items) { return newData; }
+
   data.items.forEach((item, i) => {
     const { volumeInfo } = item;
     newData[i] = {
