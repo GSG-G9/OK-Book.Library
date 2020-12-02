@@ -6,9 +6,10 @@ const filterData = (data) => {
     const { volumeInfo } = item;
     newData[i] = {
       title: volumeInfo.title,
-      authors: volumeInfo.authors,
-      imageLinks: volumeInfo.imageLinks,
+      authors: volumeInfo.authors[0],
+      imageLink: volumeInfo.imageLinks.thumbnail,
       infoLink: volumeInfo.infoLink,
+      description: volumeInfo.description,
     };
   });
 
