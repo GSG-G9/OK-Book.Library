@@ -154,7 +154,6 @@ body {
 
 .content-wrapper {
   display: flex;
-  border-bottom: 1px solid #ebedef;
   position: relative;
 }
 
