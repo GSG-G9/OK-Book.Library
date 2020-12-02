@@ -2,8 +2,8 @@
 Visit this [Link](https://ok-book-library.herokuapp.com/home) to view our App
 
 #### Team members:-
-Osama Younis
-Khamis AlBashiti
+- Osama Younis
+- Khamis AlBashiti
 
 #### Purpose
 This Website search books  - it searches in API - you can read document an API here
