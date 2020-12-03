@@ -1,7 +1,9 @@
+require('dotenv').config();
+
+const { join } = require('path');
+
 const express = require('express');
 const logger = require('morgan');
-const { join } = require('path');
-require('dotenv').config();
 
 const router = require('./router');
 
@@ -16,7 +18,7 @@ app.use(express.json());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', router);
+app.use(router);
 
 app.use(express.static(join(__dirname, '..', 'public')));
 app.use(notFound);

@@ -30,17 +30,6 @@ describe('Get project by id', () => {
       });
   });
 
-  test('Route /api/v1/search/javascript return status (200) ', (done) => {
-    request(app)
-      .get('/api/v1/search/javascript')
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-        expect(typeof res.body).toBe('object');
-        done();
-      });
-  });
-
   test('Route /api/v1/jj return status (404) ', (done) => {
     request(app)
       .get('/api/v1/jj')

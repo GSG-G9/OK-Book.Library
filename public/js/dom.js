@@ -52,7 +52,7 @@ const clearCards = () => {
 };
 
 const fetchData = (input = 'communication') => {
-  fetch(`/api/v1/search/${input}`)
+  fetch(`/api/v1/search?q=${input}`)
     .then((data) => data.json())
     .then((data) => {
       clearCards();

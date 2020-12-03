@@ -4,7 +4,9 @@
   document.querySelector('.search-bar input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       const input = e.currentTarget.value.toLowerCase().trim();
-      fetchData(input);
+      if (input) {
+        fetchData(input);
+      }
     }
   });
 })();
